@@ -1,0 +1,28 @@
+class Animal:
+  def __init__(self, name):
+    self.name = name
+
+  def move(self):
+    raise NotImplementedError("Subclasses must implement the move() method.")
+
+class Dog(Animal):
+  def move(self):
+    print(f"{self.name} is running.")
+
+class Bird(Animal):
+  def move(self):
+    print(f"{self.name} is flying.")
+
+class Fish(Animal):
+  def move(self):
+    print(f"{self.name} is swimming.")
+
+# Create instances of animals
+dog = Dog("Buddy")
+bird = Bird("Tweety")
+fish = Fish("Nemo")
+
+# Make them move
+dog.move() 
+bird.move()
+fish.move()
